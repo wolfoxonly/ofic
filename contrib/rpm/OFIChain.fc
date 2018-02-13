@@ -1,0 +1,8 @@
+/usr/bin/OFIChain-cli		--	gen_context(system_u:object_r:OFIChain_exec_t,s0)
+/usr/sbin/OFIChaind		--	gen_context(system_u:object_r:OFIChain_exec_t,s0)
+/usr/lib(64)?/OFIChain/OFIChaind		--	gen_context(system_u:object_r:OFIChain_exec_t,s0)
+
+/etc/OFIChain(/.*)?		gen_context(system_u:object_r:OFIChain_conf_t,s0)
+/var/lib/OFIChain(/.*)?		gen_context(system_u:object_r:OFIChain_var_lib_t,s0)
+
+(/var)?/run/OFIChaind(/.*)?   gen_context(system_u:object_r:OFIChain_var_run_t,s0)

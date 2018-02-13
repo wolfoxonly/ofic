@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=OFIChain Core
+Comment=Connect to the OFIChain P2P Network
+Comment[de]=Verbinde mit dem OFIChain peer-to-peer Netzwerk
+Comment[fr]=OFIChain, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=OFIChain, eşten eşe kriptografik sanal para birimi
+Exec=OFIChain-qt %u
+Terminal=false
+Type=Application
+Icon=OFIChain128
+MimeType=x-scheme-handler/OFIChain;
+Categories=Office;Finance;
+StartupWMClass=OFIChain-qt

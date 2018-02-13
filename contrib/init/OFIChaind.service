@@ -1,0 +1,25 @@
+# It is not recommended to modify this file in-place, because it will
+# be overwritten during package upgrades. If you want to add further
+# options or overwrite existing ones then use
+# $ systemctl edit OFIChaind.service
+# See "man systemd.service" for details.
+
+# Note that almost all daemon options could be specified in
+# /etc/OFIChain/OFIChain.conf
+
+[Unit]
+Description=OFIChain daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/OFIChaind -daemon -conf=/etc/OFIChain/OFIChain.conf -pid=/run/OFIChaind/OFIChaind.pid
+# Creates /run/OFIChaind owned by OFIChain
+RuntimeDirectory=OFIChaind
+User=OFIChain
+Type=forking
+PIDFile=/run/OFIChaind/OFIChaind.pid
+Restart=on-failure
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+usr/local/bin/OFIChain-qt usr/bin
+share/pixmaps/OFIChain32.xpm usr/share/pixmaps
+share/pixmaps/OFIChain16.xpm usr/share/pixmaps
+share/pixmaps/OFIChain128.png usr/share/pixmaps
+debian/OFIChain-qt.desktop usr/share/applications
+debian/OFIChain-qt.protocol usr/share/kde4/services/
