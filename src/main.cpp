@@ -1247,7 +1247,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge,int64 balance)//<zxb>
     //     }
     // }
     //10分钟一个区块的话，一年是 24 * 60 / 10 * 365
-    int year =  std::ceil(pindexBest->nHeight / (24 * 60 / 10 * 365));//zxb利率衰减部分
+    int year =  std::ceil(pindexBest->nHeight / (24 * 60 / 2 * 365));//zxb利率衰减部分
     printf("year ===== %d\n", year);
 
     float rate = 5*pow(0.888299,year);//zxb
