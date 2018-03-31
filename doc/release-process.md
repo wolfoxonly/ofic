@@ -84,7 +84,7 @@ Ensure gitian-builder is up-to-date:
 
     pushd ./gitian-builder
     mkdir -p inputs
-    wget -P inputs https://OFIChaincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+    wget -P inputs https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
     wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     popd
 
@@ -292,9 +292,9 @@ OFIChain.org (see below for OFIChain.org update instructions).
 
   - OFIChain-dev and OFIChain-core-dev mailing list
 
-  - OFIChain Core announcements list https://OFIChaincore.org/en/list/announcements/join/
+  - OFIChain Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - OFIChaincore.org blog post
+  - bitcoincore.org blog post
 
   - Update title of #OFIChain on Freenode IRC
 

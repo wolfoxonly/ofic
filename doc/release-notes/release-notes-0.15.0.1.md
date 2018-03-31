@@ -4,7 +4,7 @@ OFIChain Core version *0.15.0.1* is now available from:
 
 and
 
-  <https://OFIChaincore.org/bin/OFIChain-core-0.15.0.1/>
+  <https://bitcoincore.org/bin/OFIChain-core-0.15.0.1/>
 
 This is a minor bug fix for 0.15.0.
 
@@ -14,7 +14,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://OFIChaincore.org/en/list/announcements/join/>
+  <https://bitcoincore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============

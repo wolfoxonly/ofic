@@ -36,7 +36,7 @@ export CCACHE_SIZE=100M
 export CCACHE_TEMPDIR=/tmp/.ccache-temp
 export CCACHE_COMPRESS=1
 export BASE_OUTDIR=$PWD/built
-export SDK_URL=https://OFIChaincore.org/depends-sources/sdks
+export SDK_URL=https://bitcoincore.org/depends-sources/sdks
 export PYTHON_DEBUG=1
 export WINEDEBUG=fixme-all
 
