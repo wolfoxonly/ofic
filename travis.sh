@@ -151,20 +151,6 @@ fi
 
 
 #script:
-if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "OFIChain/OFIChain" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then 
-	while read LINE; do 
-		travis_retry gpg --keyserver hkp://subset.pool.sks-keyservers.net --recv-keys $LINE; 
-	done < contrib/verify-commits/trusted-keys; 
-fi
-
-if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "OFIChain/OFIChain" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then 
-	git fetch --unshallow; 
-fi
-
-if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "OFIChain/OFIChain" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then 
-	contrib/verify-commits/verify-commits.sh; 
-fi
-
 export TRAVIS_COMMIT_LOG="$(git log --format=fuller -1)"
 
 if [ -n "$USE_SHELL" ]; then 
@@ -186,33 +172,9 @@ else
 	./autogen.sh
 fi
 
-#if [ -d build ]; then
-#	cd build
-#else
-#	mkdir build && cd build
-#fi
-
-#../configure --cache-file=config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && exit 1)
-
-#make distdir VERSION=$HOST
-
-#cd OFIChain-$HOST
-
-#./configure --cache-file=../config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && exit 1)
-
 ./configure $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && exit 1)
 
 make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL V=1 ; exit 1 )
-
-#export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/depends/$HOST/lib
-
-#if [ "$RUN_TESTS" = "true" ]; then 
-#	make $MAKEJOBS check VERBOSE=1; 
-#fi
-
-#if [ "$RUN_TESTS" = "true" -a -f test/functional/test_runner.py ]; then 
-#	test/functional/test_runner.py --coverage; 
-#fi
 
 #after_script:
 echo $TRAVIS_COMMIT_RANGE
