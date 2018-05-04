@@ -1252,7 +1252,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge,int64 balance)//<zxb>
 
     float rate = 5*pow(0.888299,year);//zxb
     printf("rate ===== %f\n", rate);
-    int64 nSubsidy = ((rate / 100) * nCoinAge / 365) * COIN;
+    int64 nSubsidy = ((rate / 100.0 ) * nCoinAge / 365) * COIN;//coingo.vip
 
     // if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%" PRI64d"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
